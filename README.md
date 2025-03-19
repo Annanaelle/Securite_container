@@ -37,6 +37,23 @@ Dans ce cas, le conteneur peut lire tout ce qui est lisible sur l'hôte, il n'y 
 En exécutant entre ces 2 commandes celle-ci dessous dans un second termpinal, on obtient bien une deconnection du container.
 <img width="476" alt="image" src="https://github.com/user-attachments/assets/a73b8085-c44c-4510-aa0e-7a6ba698a432" />
 
+7. Télécharger et Scanner une Image
+<img width="469" alt="image" src="https://github.com/user-attachments/assets/e973c81b-c756-4dd1-9b96-7f358e47a99b" />
+<img width="853" alt="image" src="https://github.com/user-attachments/assets/771e6679-986b-4ca6-ad71-030049aafdf1" />
+<img width="851" alt="image" src="https://github.com/user-attachments/assets/a1b65dad-989d-4036-ac9c-4362b00684e5" />
 
+Les vulnérabilités de cette image sont :
+- des failles OPENSSL, PHP, etc
+- des failles de librairies système
 
+8. Scanner une Image pour Détecter les Vulnérabilités
+<img width="853" alt="image" src="https://github.com/user-attachments/assets/ca4247df-25a2-460f-a139-dc407e7768e7" />
+
+Les différences entre grype et trivy sont :
+- trivy analyse les vulnérabilités là où grype s'occupe plus précisement des CVE des paquets logiciels.
+- trivy utilise une base de données locale, et gripe une bdd spécifique
+- trivy est très rapide et concis, là ou grype est plus lent et détaillé
+- trivy est multiformat là ou grivy est axé sur les images docker
+
+  
 
