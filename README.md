@@ -55,5 +55,13 @@ Les différences entre grype et trivy sont :
 - trivy est très rapide et concis, là ou grype est plus lent et détaillé
 - trivy est multiformat là ou grivy est axé sur les images docker
 
-  
+III. Etude de cas 
+
+Afin d'éviter une escalade des privilèges d'un hacker mal intentionné, il faut mettre en place diverses méthode de protection.
+Tout d'abord éviter au maximum d'exécuter des commandes en mode privilège. En effet, comme nous l'avons vu précédemment, ce mode donne un libre accès aux données de l'ordinateur hôte et facilite donc une escalade des privilèges.
+Utiliser des namespace et des cgroups perettra d'avoir une meilleure iolation et donc complexifier cette méthode de hacking en configurant des limites de CPU sur docker.
+A l'image de n'importe quel logiciel, mettre à jour régulièrement les images et les paquets permettra de réduire les vulnérabilités.
+Limiter les privilèges de l'utilisateur en ne le mettant pas en root.
+Mettre certains documents en readonly afin d'éviter des modifications d'un tiers.
+Le rootless mode peut être assez intéressant également afin de permettre aux utilisateurs d'installer et de manipuler des conteneurs sans les droits root et donc de les donner à moins de personnes.
 
