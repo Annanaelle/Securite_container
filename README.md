@@ -19,10 +19,12 @@ I. Enjeux de Sécurité des Containers
 II. Activités Pratiques
 1. Tester un Container avec des Permissions Élevées
 <img width="678" alt="image" src="https://github.com/user-attachments/assets/22cd044b-f856-47ee-b054-6d17b0e2d019" />
+
 L'ajout de --privileged est dangereux puisque cela revient à donner un accès root sur son hôte au conteneur. L'isolement du conteneur n'est quasiment plus effectif.
 
 2. Simuler une Évasion de Container
 <img width="287" alt="image" src="https://github.com/user-attachments/assets/1debe4c8-d93c-463c-920b-c698d5777e64" />
+
 Dans ce cas, le conteneur peut lire tout ce qui est lisible sur l'hôte, il n'y a donc plus aucune isolation. Ajouté à d'autres commandes comme --privileged, comme commande pourrait permettre à n'importe qui d'écrire des fichiers sur l'hôte.
 
 3. Créer une Image Sécurisée
@@ -31,6 +33,7 @@ Dans ce cas, le conteneur peut lire tout ce qui est lisible sur l'hôte, il n'y 
 
 4. Restreindre l’accès réseau d’un container
 <img width="464" alt="image" src="https://github.com/user-attachments/assets/1e6345dc-bcd2-40c3-8af5-42ea19f06000" />
+
 En exécutant entre ces 2 commandes celle-ci dessous dans un second termpinal, on obtient bien une deconnection du container.
 <img width="476" alt="image" src="https://github.com/user-attachments/assets/a73b8085-c44c-4510-aa0e-7a6ba698a432" />
 
