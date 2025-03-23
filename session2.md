@@ -29,3 +29,30 @@ pour le container:
 Vault
 
 ![image](https://github.com/user-attachments/assets/e1c03316-73ae-4b5b-aea6-f4fe81226b46)
+
+
+5.
+Context:
+Télécharger l'image Docker
+L'attaquant récupère l'image Docker via la commande suivante :
+
+docker pull ety92/demo:v1
+
+Inspecter l'historique des couches de l'image
+L'attaquant utilise la commande suivante pour analyser les différentes couches de l'image et détecter où la clé API pourrait avoir été ajoutée :
+
+docker history ety92/demo:v1
+
+Explorer les fichiers du conteneur
+En exécutant le conteneur avec la commande suivante, l'attaquant peut chercher la clé API en scannant les fichiers à l'intérieur du conteneur :
+
+docker run -it --rm ety92/demo:v1 /bin/sh
+
+Puis, il peut utiliser grep pour rechercher la clé API :
+
+grep -r "API_KEY" /path/to/your/files
+
+Analyser le Dockerfile
+Si accessible, l'attaquant peut examiner le Dockerfile pour repérer des lignes où une clé API est définie en tant que variable d'environnement :
+
+ENV API_KEY="12345"
