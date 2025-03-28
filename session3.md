@@ -3,11 +3,15 @@
 
 I. Déployer un Cluster Kubernetes avec Kind
 Kind est bien installé :
-
+```bash
+kind version
+```
 <img width="277" alt="image" src="https://github.com/user-attachments/assets/5e66a778-f23d-4829-aa64-f067c5e548a5" />
 
 Création du cluster :
-
+```bash
+ kind create cluster --config kind-cluster.yaml --name cluster-1
+```
 <img width="269" alt="image" src="https://github.com/user-attachments/assets/8642ad10-d16c-45f5-9fad-cd0bd76b81d7" />
 
 <img width="863" alt="image" src="https://github.com/user-attachments/assets/9e42975b-c775-4f4c-bfb8-3924d9012eed" />
