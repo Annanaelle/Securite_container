@@ -116,6 +116,29 @@ kubectl config use-context titi-context
 ```
 <img width="693" alt="image" src="https://github.com/user-attachments/assets/3a854d13-35ba-45d5-90ce-870c1ef441a7" />
 
+Tentative de lister les pods :
+```bash
+kubectl get pods -n test-rbac
+```
+<img width="796" alt="image" src="https://github.com/user-attachments/assets/8452854c-dbc7-4396-9a1b-c1eec3498df0" />
+
+On ne peut pas lister les pods puisque l'utilisateur n'a pas les droits
+
+Pour en ajouter un, on tente la commande :
+```bash
+kubectl run mypod --image=nginx --namespace=test-rbac
+```
+<img width="772" alt="image" src="https://github.com/user-attachments/assets/07bf631f-9910-401b-847c-e60f454517fd" />
+
+On ne peut pas non plus en ajouter
+
+On reswitch sur le contect de base :
+<img width="695" alt="image" src="https://github.com/user-attachments/assets/104b55c5-9316-4f93-9be2-9f9b4ff82d6c" />
+
+3. Scanner un Cluster Kubernetes avec Kube-Bench
+
+
+
 
 
 
