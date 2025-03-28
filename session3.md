@@ -11,6 +11,7 @@ kind version
 Création du cluster :
 
 <img width="269" alt="image" src="https://github.com/user-attachments/assets/8642ad10-d16c-45f5-9fad-cd0bd76b81d7" />
+
 ```bash
 kind create cluster --config kind-cluster.yaml --name cluster-1
 ```
