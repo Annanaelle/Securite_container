@@ -17,9 +17,9 @@ Le cluster fonctionne bien :
 <img width="719" alt="image" src="https://github.com/user-attachments/assets/f2b35f34-e943-4ab9-ae0e-5201fd8a6960" />
 
 Pour afficher la liste des namespace :
-''' bash
+``` bash
 kubectl get namespaces
-'''
+```
 
 <img width="752" alt="image" src="https://github.com/user-attachments/assets/193c0429-57f7-4df5-8f5b-760ad1736e6c" />
 
