@@ -73,7 +73,48 @@ kubectl get role pod-reader -n test-rbac -o yaml
 ```
 <img width="854" alt="image" src="https://github.com/user-attachments/assets/b2f31029-a5ed-4025-9ba9-d4040c2b369e" />
 
+Créer le rôle et l'appliquer :
 
+<img width="278" alt="image" src="https://github.com/user-attachments/assets/98726464-1537-49ab-92f7-a3e94d0c5b07" />
+
+```bash
+kubectl apply -f rolebinding-pod-reader.yaml
+```
+<img width="851" alt="image" src="https://github.com/user-attachments/assets/79f33099-0e60-46ae-80f2-0341f225e028" />
+
+
+Création de l'utilisateur titi :
+```bash
+docker cp cluster-1-control-plane:/etc/kubernetes/pki/ca.crt .
+docker cp cluster-1-control-plane:/etc/kubernetes/pki/ca.key .
+```
+<img width="851" alt="image" src="https://github.com/user-attachments/assets/5db41fc0-7346-4b10-b805-603f186acbcd" />
+
+<img width="851" alt="image" src="https://github.com/user-attachments/assets/b0609d9b-7f3c-4096-92bf-09e23c1c635d" />
+
+Après résolution du problème :
+```bash
+openssl x509 -req -in titi.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out titi.crt -days 365 -config ./openssl.conf
+```
+<img width="399" alt="image" src="https://github.com/user-attachments/assets/3c264753-6901-4a2e-aba6-788a2b8b2597" />
+
+Ajout de l'utilisateur dans le kube 
+```bash
+kubectl config set-credentials titi --client-certificate=titi.crt --client-key=titi.key
+```
+<img width="953" alt="image" src="https://github.com/user-attachments/assets/8f9cf434-2428-4efd-a082-463c993c3f3e" />
+
+Créationd 'un contexte pour titi :
+```bash
+kubectl config set-context titi-context --cluster=kind-kind --namespace=test-rbac --user=titi
+```
+<img width="943" alt="image" src="https://github.com/user-attachments/assets/cf2ed033-841b-42fe-b795-f288c60c524b" />
+
+Basculer de contecxte :
+```bash
+kubectl config use-context titi-context
+```
+<img width="693" alt="image" src="https://github.com/user-attachments/assets/3a854d13-35ba-45d5-90ce-870c1ef441a7" />
 
 
 
