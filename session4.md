@@ -10,3 +10,4 @@ on peut exporter la clé privé avec Cosign:
 
 ![image](https://github.com/user-attachments/assets/65bafc9a-01ca-4ff9-988f-0cd773e2ad02)
 
+![image](https://github.com/user-attachments/assets/f714097d-f77c-4360-bf45-da4c3ca5cd28)
