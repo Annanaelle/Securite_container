@@ -136,9 +136,20 @@ On reswitch sur le contect de base :
 <img width="695" alt="image" src="https://github.com/user-attachments/assets/104b55c5-9316-4f93-9be2-9f9b4ff82d6c" />
 
 3. Scanner un Cluster Kubernetes avec Kube-Bench
+Afin d'utiliser Kube-Bench sur windows, je passe par docker.
+```bash
+docker run --rm --privileged -v /etc:/etc aquasec/kube-bench:latest
+```
+Création du job 
 
+<img width="295" alt="image" src="https://github.com/user-attachments/assets/40de766d-cf2a-4c9a-b8b1-d983748568f2" />
 
+```bash
+kubectl apply -f job.yml
+```
+<img width="601" alt="image" src="https://github.com/user-attachments/assets/62b8872e-5468-4d96-8556-d3b5079d9aeb" />
 
+Ce bench teste la configuration de kubernetes pour s'assurer qu'elle respecte les bonnes pratiques de sécurité. Il can les composants kubernetes comme kubelet ou l'API, pour ensuite teste l'accès aux ressources, vérifier les rôles et permissions et finalement générer un rapport de sécurité.
 
 
 
