@@ -6,8 +6,15 @@ on peut la voir avec:
 
 ![image](https://github.com/user-attachments/assets/b8f89832-efae-4f34-bce0-9041f2daa252)
 
-on peut exporter la clé privé avec Cosign:
+cette technique ne marche pas a cause de l'exportation sur cosign donc il a fallu recommencer:
+On régénère la clé:
+![image](https://github.com/user-attachments/assets/4bf858e6-79b7-4f44-aed7-9ef0fdd84dd7)
 
-![image](https://github.com/user-attachments/assets/65bafc9a-01ca-4ff9-988f-0cd773e2ad02)
+initialisation docker:
 
-![image](https://github.com/user-attachments/assets/f714097d-f77c-4360-bf45-da4c3ca5cd28)
+![image](https://github.com/user-attachments/assets/f95830da-8c9a-461d-9f11-374a92484b7b)
+
+on push et on signe avec cosign:
+
+![image](https://github.com/user-attachments/assets/d00f11cb-7b90-49cb-bb8b-76bf60272d6e)
+
