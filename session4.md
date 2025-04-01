@@ -18,3 +18,7 @@ on push et on signe avec cosign:
 
 ![image](https://github.com/user-attachments/assets/d00f11cb-7b90-49cb-bb8b-76bf60272d6e)
 
+Les deux ont marché:
+
+![image](https://github.com/user-attachments/assets/04115860-4b69-48cb-8e67-db7e90431e45)
+
