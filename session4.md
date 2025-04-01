@@ -22,3 +22,17 @@ Les deux ont marché:
 
 ![image](https://github.com/user-attachments/assets/04115860-4b69-48cb-8e67-db7e90431e45)
 
+
+
+Lorsque l'on lance la pipeline après avoir modifier le dockerfile et le .gitlab-ci.yml:
+
+![image](https://github.com/user-attachments/assets/aa14d253-c4da-400c-a951-fd0dfb52a27b)
+
+si on met la mauvaise version sur le dockerfile:
+
+![image](https://github.com/user-attachments/assets/df48efb0-7d8f-4d53-a8ba-246a879bf095)
+
+Trivy a trouvé une vulnérabilité critique et a avorté le processus en envoyant un exit code 1:
+
+![image](https://github.com/user-attachments/assets/5da1cdcd-91fa-422a-95d4-1631d8878ecb)
+
